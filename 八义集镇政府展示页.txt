@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>邳州市八义集镇人民政府 · 招商引资服务平台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%230B3A6B'/%3E%3Cpath d='M6 17h12M12 5v9M8.5 10.5 12 14l3.5-3.5' stroke='%23F2C94C' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+:root{
+  --navy:#0B3A6B;      /* 政务藏蓝 */
+  --navy-deep:#082a4d;
+  --red:#B5332E;       /* 政务红 */
+  --red-deep:#8f2622;
+  --gold:#B8860B;      /* 辅助金 */
+  --ink:#1f2937;       /* 正文 */
+  --ink-soft:#4b5563;
+  --paper:#f5f7fa;     /* 页底 */
+  --card:#ffffff;
+  --line:#e3e8f0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"Noto Sans SC",system-ui,-apple-system,"Microsoft YaHei",sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.serif{font-family:"Noto Serif SC","Songti SC","SimSun",serif;}
+
+/* ===== 顶部导航 ===== */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--navy);
+  color:#fff;
+  box-shadow:0 1px 0 rgba(255,255,255,.08);
+}
+.topbar-inner{
+  max-width:1160px;margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between;height:64px;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand .badge{
+  width:40px;height:40px;border-radius:8px;flex:none;
+  background:linear-gradient(135deg,var(--red),var(--red-deep));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+.brand .t1{font-family:"Noto Serif SC",serif;font-weight:700;font-size:17px;letter-spacing:.5px;}
+.brand .t2{font-size:11px;opacity:.8;letter-spacing:2px;}
+.nav{display:flex;gap:4px;}
+.nav a{
+  color:#dbe6f4;text-decoration:none;font-size:14px;
+  padding:8px 13px;border-radius:6px;transition:background .15s,color .15s;
+}
+.nav a:hover{background:rgba(255,255,255,.12);color:#fff;}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#0B3A6B 0%,#0f4a8a 55%,#10579e 100%);
+  color:#fff;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(600px 300px at 85% -10%,rgba(242,201,76,.16),transparent 60%),
+    radial-gradient(500px 260px at 10% 110%,rgba(181,51,46,.28),transparent 55%);
+}
+.hero .grain{
+  position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+.hero-inner{
+  position:relative;max-width:1160px;margin:0 auto;
+  padding:78px 20px 64px;
+}
+.hero .eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;letter-spacing:3px;color:#f2c94c;
+  border:1px solid rgba(242,201,76,.45);border-radius:999px;
+  padding:6px 16px;margin-bottom:22px;
+}
+.hero .eyebrow::before{content:"";width:16px;height:1px;background:#f2c94c;}
+.hero h1{font-size:42px;line-height:1.25;font-weight:900;letter-spacing:1px;}
+.hero h1 em{font-style:normal;color:#f2c94c;}
+.hero .sub{margin-top:14px;font-size:19px;color:#e8f0fa;letter-spacing:4px;}
+.hero .tagline{
+  margin-top:26px;font-size:16px;color:#cfe0f2;
+  border-left:4px solid var(--red);padding-left:14px;max-width:640px;
+}
+.hero-stats{
+  margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid rgba(255,255,255,.18);
+}
+.hero-stats .stat{padding:22px 10px 6px;border-right:1px solid rgba(255,255,255,.18);}
+.hero-stats .stat:last-child{border-right:none;}
+.hero-stats .num{font-family:"Noto Serif SC",serif;font-size:34px;font-weight:900;color:#fff;line-height:1;}
+.hero-stats .num span{font-size:20px;color:#f2c94c;}
+.hero-stats .lab{margin-top:8px;font-size:13px;color:#c3d6ec;}
+
+/* ===== 区块通用 ===== */
+.section{padding:64px 0;}
+.section-head{max-width:1160px;margin:0 auto 36px;padding:0 20px;}
+.kicker{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:3px;color:var(--red);font-weight:700;}
+.kicker::before{content:"";width:28px;height:3px;background:var(--red);}
+.section-head h2{font-size:30px;color:var(--navy);margin-top:10px;font-weight:700;}
+.section-head .desc{margin-top:8px;color:var(--ink-soft);font-size:15px;max-width:760px;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px;}
+
+/* 卡片网格 */
+.grid{display:grid;gap:20px;}
+.g3{grid-template-columns:repeat(3,1fr);}
+.g2{grid-template-columns:repeat(2,1fr);}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:26px 24px;
+}
+.card .ic{
+  width:44px;height:44px;border-radius:9px;margin-bottom:16px;
+  background:#eef3fa;display:flex;align-items:center;justify-content:center;color:var(--navy);
+}
+.card h3{font-size:18px;color:var(--navy);margin-bottom:10px;}
+.card p, .card li{color:var(--ink-soft);font-size:14.5px;}
+.card ul{padding-left:18px;}
+.card li{margin:6px 0;}
+.card .note{color:#9aa5b1;font-size:12.5px;margin-top:10px;}
+
+/* 列表区块 */
+.lead-block{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px;}
+.lead-block p{color:var(--ink-soft);font-size:15px;}
+.lead-block .hl{color:var(--navy);font-weight:700;}
+
+/* ===== 区位 ===== */
+.band{background:var(--navy);color:#fff;}
+.band .section-head h2{color:#fff;}
+.band .kicker::before{background:var(--red);}
+.band .desc{color:#c3d6ec;}
+.traffic{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.traffic .item{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:10px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;
+}
+.traffic .item .t-ic{flex:none;color:#f2c94c;}
+.traffic .item h4{color:#fff;font-size:16px;margin-bottom:4px;}
+.traffic .item p{color:#c3d6ec;font-size:14px;}
+
+/* ===== 产业 ===== */
+.industry-card{border-top:4px solid var(--red);}
+.pill{display:inline-block;font-size:12px;color:var(--red);background:#fbeceb;border-radius:999px;padding:3px 11px;margin-bottom:12px;}
+.achieve{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px;
+}
+.achieve .a-card{background:#fbf3f2;border:1px solid #f0d9d6;border-radius:10px;padding:22px 18px;text-align:center;}
+.achieve .a-num{font-family:"Noto Serif SC",serif;font-size:30px;font-weight:900;color:var(--red);line-height:1;}
+.achieve .a-num span{font-size:17px;}
+.achieve .a-lab{margin-top:8px;font-size:13px;color:var(--ink-soft);}
+
+/* ===== 服务 ===== */
+.service-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px 22px;}
+.step .no{
+  font-family:"Noto Serif SC",serif;font-size:40px;font-weight:900;color:#dde5f0;line-height:1;margin-bottom:10px;
+}
+.step h3{font-size:17px;color:var(--navy);margin-bottom:8px;}
+.step p{color:var(--ink-soft);font-size:14px;}
+
+/* ===== 联系 ===== */
+.contact{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;}
+.contact .section-head h2{color:#fff;}
+.contact .desc{color:#c3d6ec;}
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;}
+.c-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:26px;}
+.c-card h3{color:#f2c94c;font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.c-card .row{display:flex;gap:12px;margin:12px 0;color:#dbe6f4;font-size:14.5px;align-items:flex-start;}
+.c-card .row .k{color:#9fc1e4;flex:none;width:74px;}
+.c-card .phone{font-family:"Noto Serif SC",serif;font-size:30px;font-weight:900;color:#fff;letter-spacing:1px;}
+.c-card .phone-tip{color:#9fc1e4;font-size:12.5px;margin-top:4px;}
+
+/* 来源脚注 */
+.sources{background:var(--paper);border-top:1px solid var(--line);padding:26px 0;}
+.sources .wrap{max-width:1160px;margin:0 auto;padding:0 20px;}
+.sources h4{font-size:13px;color:var(--ink);margin-bottom:10px;letter-spacing:1px;}
+.sources ul{list-style:none;padding:0;}
+.sources li{font-size:12.5px;color:#8a94a3;margin:5px 0;word-break:break-all;}
+.sources a{color:var(--navy);text-decoration:none;}
+
+footer{background:#071f38;color:#9fb3c9;text-align:center;padding:22px 20px;font-size:13px;}
+
+/* ===== 响应式 ===== */
+@media(max-width:860px){
+  .topbar-inner{flex-wrap:wrap;height:auto;padding:12px 16px;gap:10px;}
+  .nav{width:100%;justify-content:flex-start;overflow-x:auto;}
+  .hero h1{font-size:30px;}
+  .hero .sub{font-size:16px;letter-spacing:2px;}
+  .hero-stats{grid-template-columns:repeat(3,1fr);}
+  .hero-stats .num{font-size:26px;}
+  .g3,.service-steps{grid-template-columns:1fr;}
+  .g2,.traffic,.contact-grid{grid-template-columns:1fr;}
+  .achieve{grid-template-columns:repeat(2,1fr);}
+  .section{padding:44px 0;}
+  .section-head h2{font-size:25px;}
+}
+@media(max-width:520px){
+  .hero-stats{grid-template-columns:1fr;border-top:none;}
+  .hero-stats .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);}
+  .hero-stats .stat:last-child{border-bottom:none;}
+  .achieve{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== 导航 ===== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l6-4 6 4 6-4v13M8 21v-7h8v7"/></svg>
+      </span>
+      <div>
+        <div class="t1">八义集镇人民政府</div>
+        <div class="t2">邳州市 · 招商引资服务平台</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#about">乡镇概况</a>
+      <a href="#traffic">区位优势</a>
+      <a href="#industry">产业发展</a>
+      <a href="#service">投资服务</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="grain"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">诚 邀 投 资 · 共 创 未 来</div>
+    <h1>邳州市八义集镇<br><em>政府招商引资服务平台</em></h1>
+    <div class="sub">邳州智造西门户 · 徐州东郊桥头堡</div>
+    <div class="tagline">八义集镇依托陇海铁路、连徐高速等交通优势，聚焦工程机械配套、智能制造、新能源汽车等重点产业，聚力打造特色鲜明、绿色低碳的现代化产业园区，竭诚欢迎各界客商前来考察洽谈、投资兴业。</div>
+    <div class="hero-stats">
+      <div class="stat"><div class="num">123.5<span> 平方公里</span></div><div class="lab">境域面积</div></div>
+      <div class="stat"><div class="num">8.49<span> 万人</span></div><div class="lab">户籍总人口</div></div>
+      <div class="stat"><div class="num">25<span> 个</span></div><div class="lab">行政村（另有1个居委会）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 镇情概况 ===== -->
+<section class="section" id="about">
+  <div class="section-head">
+    <div class="kicker">镇 情 概 况</div>
+    <h2>千年古镇 · 产业发展热土</h2>
+    <div class="desc">八义集镇位于邳州市和徐州市交界处，是邳州四大古镇之一，兼具深厚人文底蕴与现代化产业发展基础。</div>
+  </div>
+  <div class="wrap">
+    <div class="lead-block">
+      <p><span class="hl">地理位置：</span>八义集镇位于邳州市和徐州市交界处，距邳州市区30公里、徐州市区45公里。东、北与碾庄镇毗邻，南与占城镇接壤，西与铜山区单集镇、大许镇相望。</p>
+    </div>
+    <div class="grid g3" style="margin-top:20px;">
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <h3>境域规模</h3>
+        <p>境域面积123.5平方公里，户籍总人口84904人，下辖25个行政村和1个居委会、119个自然村、261个村民小组。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg></div>
+        <h3>建制沿革</h3>
+        <p>八义集旧称丁家集。1987年撤乡建镇，2000年新桥乡及八义集蚕种场并入，历经区、乡、公社、镇建制沿革，古镇格局日臻完善。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6h6l-5 4 2 6-5.5-3.5L6 18l2-6-5-4h6z"/></svg></div>
+        <h3>名称由来</h3>
+        <p>清乾隆五十四年，曹殿楹考中武举，曹家渐富，买下集市，以"孝、悌、忠、信、礼、义、廉、耻"八义管理集市，八义集由此得名，亦称曹八集。</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== 区位优势 ===== -->
+<section class="section band" id="traffic">
+  <div class="section-head">
+    <div class="kicker">区 位 交 通</div>
+    <h2>承东启西 · 通达四方</h2>
+    <div class="desc">地处邳州、徐州交界，铁公水多式联运条件优越，为产业集聚与物流畅通提供坚实支撑。</div>
+  </div>
+  <div class="wrap">
+    <div class="traffic">
+      <div class="item">
+        <span class="t-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M6 9l2-5h8l2 5M6 15l-2 6M18 15l2 6M8 13h.01M16 13h.01"/></svg></span>
+        <div><h4>铁路交通</h4><p>陇海铁路、徐连高铁横跨东西，坐拥陇海线上的重要站点，货物与客流往来便捷。</p></div>
+      </div>
+      <div class="item">
+        <span class="t-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M5 6l1-3h12l1 3M3 6l1 14h4l1-7M21 6l-1 14h-4l-1-7M10 20a2 2 0 1 0 4 0"/></svg></span>
+        <div><h4>公路高速</h4><p>连徐高速、连霍高速、323省道徐海公路等过境，271省道、344省道穿境而过，连接邳州、徐州两大城区。</p></div>
+      </div>
+      <div class="item">
+        <span class="t-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg></span>
+        <div><h4>水路航运</h4><p>南傍徐洪河，东有八义集航道入京杭运河，内河航运条件具备，满足大宗货物运输需求。</p></div>
+      </div>
+      <div class="item">
+        <span class="t-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M6 17V9a6 6 0 0 1 6-6h3M18 7v8a6 6 0 0 1-6 6H9"/></svg></span>
+        <div><h4>双城辐射</h4><p>距邳州市区30公里、徐州市区45公里，紧邻徐州市区与铜山区，可承接产业转移、共享城市配套资源。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 产业发展 ===== -->
+<section class="section" id="industry">
+  <div class="section-head">
+    <div class="kicker">产 业 发 展</div>
+    <h2>聚焦重点赛道 · 壮大产业集群</h2>
+    <div class="desc">八义集园区明确"邳州智造西门户、徐州东郊桥头堡"目标定位，聚焦徐州"343"创新产业集群工程机械"一号产业"，主攻工程机械配套，重点发展结构件、两室两箱等细分领域。</div>
+  </div>
+  <div class="wrap">
+    <div class="grid g3">
+      <div class="card industry-card">
+        <span class="pill">园区三大主攻赛道</span>
+        <h3>工程机械配套</h3>
+        <p>紧扣徐州"一核两翼三片区"布局，主攻工程机械配套产业，重点发展结构件、两室两箱等细分领域，精准承接产业转移。</p>
+      </div>
+      <div class="card industry-card">
+        <span class="pill">园区三大主攻赛道</span>
+        <h3>智能制造</h3>
+        <p>聚焦智能化生产、绿色制造方向，推进产业转型升级，构建现代化产业体系。</p>
+      </div>
+      <div class="card industry-card">
+        <span class="pill">园区三大主攻赛道</span>
+        <h3>新能源汽车</h3>
+        <p>围绕汽车零部件与相关配套产业布局，着力招引10亿级龙头项目和链主企业，做强产业链条。</p>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:20px;">
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+        <h3>零碳园区建设</h3>
+        <p>以园区建设为载体，加快完善路网、管网、水电气等基础设施，高标准推进零碳园区规划建设，打造绿色低碳、特色鲜明的现代化产业园区。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4.4-3 8.4-7 9-4-.6-7-4.6-7-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+        <h3>特色农业 · 一村一品</h3>
+        <p>因地制宜培育特色富民产业，激活村集体经济发展动能。枣园村发展仿真花树电商直播，仙庄村依托龙头企业发展生态养殖，并因地制宜种植食用菌等特色农产品，实现家门口就业增收。</p>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:44px;margin-bottom:22px;">
+      <div class="kicker">招 商 成 果 · 2025 年前三季度</div>
+    </div>
+    <div class="achieve">
+      <div class="a-card"><div class="a-num">6<span> 个</span></div><div class="a-lab">累计签约项目（3个已投产）</div></div>
+      <div class="a-card"><div class="a-num">8.2<span> 亿元</span></div><div class="a-lab">工业开票收入（同比增长20%）</div></div>
+      <div class="a-card"><div class="a-num">2<span> 家</span></div><div class="a-lab">新增规上工业企业</div></div>
+      <div class="a-card"><div class="a-num">4<span> 家</span></div><div class="a-lab">新增规上服务业企业</div></div>
+    </div>
+    <p style="font-size:12.5px;color:#9aa5b1;margin-top:12px;">注：招商成果数据引自邳州新闻网2025年10月报道《八义集镇召开招商引资动员大会》。</p>
+  </div>
+</section>
+
+<!-- ===== 投资服务 ===== -->
+<section class="section" id="service">
+  <div class="section-head">
+    <div class="kicker">投 资 服 务</div>
+    <h2>优化营商环境 · 护航项目落地</h2>
+    <div class="desc">八义集镇持续优化营商环境，一体推进园区建设和招商引资，为落地项目提供全程跟进服务。</div>
+  </div>
+  <div class="wrap">
+    <div class="service-steps">
+      <div class="step">
+        <div class="no">01</div>
+        <h3>考察洽谈</h3>
+        <p>欢迎各界客商实地考察园区区位、交通与配套，镇招商服务部门提供政策咨询与对接服务。</p>
+      </div>
+      <div class="step">
+        <div class="no">02</div>
+        <h3>项目落地</h3>
+        <p>聚焦重点产业招引，加快土地与基础设施配套，推动项目尽快开工建设、投产达效。</p>
+      </div>
+      <div class="step">
+        <div class="no">03</div>
+        <h3>全程服务</h3>
+        <p>持续优化营商环境，强化项目招引与落地建设全流程服务，助力企业安心经营、发展壮大。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 联系我们 ===== -->
+<section class="section contact" id="contact">
+  <div class="section-head">
+    <div class="kicker">联 系 我 们</div>
+    <h2>八义集镇便民服务中心</h2>
+    <div class="desc">欢迎致电或来访，我们将竭诚为您提供招商引资政策咨询与对接服务。</div>
+  </div>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="c-card">
+        <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>招商服务热线</h3>
+        <div class="phone">0516-80316653</div>
+        <div class="phone-tip">八义集镇便民服务中心联系电话</div>
+      </div>
+      <div class="c-card">
+        <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>办公信息</h3>
+        <div class="row"><span class="k">办公地址</span><span>八义集镇街南（八义集镇便民服务中心）</span></div>
+        <div class="row"><span class="k">工作时间</span><span>周一至周五 8:30–12:00，14:00–17:30<br>法定节假日除外</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 信息来源 ===== -->
+<div class="sources">
+  <div class="wrap">
+    <h4>信息依据（本页内容均取自以下官方公开信息）</h4>
+    <ul>
+      <li>八义集镇政务服务网 · 辖区简介与便民服务中心：<a href="http://pzsbyjz.jszwfw.gov.cn/" target="_blank" rel="noopener">http://pzsbyjz.jszwfw.gov.cn/</a></li>
+      <li>邳州新闻网《八义集镇召开招商引资动员大会》（2025年10月）：<a href="https://www.pznews.com/xinwen/2025/10/405945.html" target="_blank" rel="noopener">https://www.pznews.com/xinwen/2025/10/405945.html</a></li>
+      <li>新华网江苏频道《邳州：市委书记领衔督办，政协提案助力经济发展》（2023年11月）：<a href="http://www.js.xinhuanet.com/20231114/a736fd2eb1fe4b60a4e5effa8df775a2/c.html" target="_blank" rel="noopener">http://www.js.xinhuanet.com/20231114/a736fd2eb1fe4b60a4e5effa8df775a2/c.html</a></li>
+      <li>澎湃新闻《杨远朝调研工程机械产业》及八义集镇镇长公开表态报道</li>
+      <li>邳州新闻网《富民强村在路上丨八义集特色产业多点开花》（2026年6月）</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  © 2026 邳州市八义集镇人民政府 招商引资服务平台 · 本页面为信息展示页，所有数据以官方发布为准
+</footer>
+</body>
+</html>
